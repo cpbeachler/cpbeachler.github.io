@@ -1,6 +1,11 @@
+import Char from "./components/Char"
+
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <div>
+        <h1>Hello from App</h1>
+        <Char />
+    </div>
   );
 }
 
