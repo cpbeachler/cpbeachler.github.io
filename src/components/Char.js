@@ -15,18 +15,26 @@ const Char = () =>{
             return Math.floor(Math.random() * (1 + 5) + 1)
         }
         let getStat = () => {
-            let stat = [roll(), roll(), roll(), roll() ]
-            console.log(stat)
+            let stat = [roll(), roll(), roll(), roll()]
             const min = Math.min(...stat)
-            let dropped = stat.filter(e => e !== min)
+            let dropped = []
+            let didDrop = false;
+            for(let i=0; i < stat.length; i++){
+                if(stat[i] === min && !didDrop){
+                    didDrop = true;
+                } else {
+                    dropped.push(stat[i])
+                }
+            }
+            console.log(dropped)
             return dropped.reduce((a,b) => a + b, 0)
         }
-        setWis(getStat)
-        setStr(getStat)
-        setCon(getStat)
-        setInt(getStat)
-        setDex(getStat)
-        setCha(getStat)
+        setWis(getStat())
+        setStr(getStat())
+        setCon(getStat())
+        setInt(getStat())
+        setDex(getStat())
+        setCha(getStat())
     }
     return(
         <div>
@@ -41,7 +49,6 @@ const Char = () =>{
                     <p>Dexterity : {dex}</p>
                     <p>Charisma : {cha}</p>
                 </div>
-
             </div>
             <button onClick={onRoll}>Roll up!</button>
         </div>
