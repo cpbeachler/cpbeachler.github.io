@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from "react";
-
+import './CSS/char.css'
 
 const Char = () =>{
     const [wis, setWis] = useState(0)
@@ -8,9 +8,11 @@ const Char = () =>{
     const [int, setInt] = useState(0)
     const [dex, setDex] = useState(0)
     const [cha, setCha] = useState(0)
+    const [hideChar, setHideChar] = useState(true)
 
     const onRoll = (e) => {
         e.preventDefault()
+        setHideChar(false)
         let roll = () => {
             return Math.floor(Math.random() * (1 + 5) + 1)
         }
@@ -26,7 +28,6 @@ const Char = () =>{
                     dropped.push(stat[i])
                 }
             }
-            console.log(dropped)
             return dropped.reduce((a,b) => a + b, 0)
         }
         setWis(getStat())
@@ -37,19 +38,21 @@ const Char = () =>{
         setCha(getStat())
     }
     return(
-        <div>
-            <div>
-                <div>
-                    <p>Wisdom : {wis}</p>
-                    <p>Strength : {str}</p>
-                    <p>Constitution : {con}</p>
-                </div>
-                <div>
-                    <p>Intelligence : {int}</p>
-                    <p>Dexterity : {dex}</p>
-                    <p>Charisma : {cha}</p>
-                </div>
-            </div>
+        <div className='charSheet'>
+            {console.log(hideChar)}
+            {!hideChar &&
+                        <div className='stats'>
+                        <div className='brain'>
+                            <p className='stat'>Wisdom : {wis}</p>
+                            <p className='stat'>Intelligence : {int}</p>
+                            <p className='stat'>Charisma : {cha}</p>
+                        </div>
+                        <div className='brawn'>
+                            <p className='stat'>Strength : {str}</p>
+                            <p className='stat'>Constitution : {con}</p>
+                            <p className='stat'>Dexterity : {dex}</p>
+                        </div>
+                    </div>}
             <button onClick={onRoll}>Roll up!</button>
         </div>
     )
