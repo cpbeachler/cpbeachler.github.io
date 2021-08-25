@@ -39,19 +39,18 @@ const Char = () =>{
     }
     return(
         <div className='charSheet'>
-            {console.log(hideChar)}
             {!hideChar &&
                         <div className='stats'>
-                        <div className='brain'>
-                            <p className='stat'>Wisdom : {wis}</p>
-                            <p className='stat'>Intelligence : {int}</p>
-                            <p className='stat'>Charisma : {cha}</p>
-                        </div>
-                        <div className='brawn'>
-                            <p className='stat'>Strength : {str}</p>
-                            <p className='stat'>Constitution : {con}</p>
-                            <p className='stat'>Dexterity : {dex}</p>
-                        </div>
+                            <div className='brain'>
+                                <p className='stat'>Wisdom : {wis}</p>
+                                <p className='stat'>Intelligence : {int}</p>
+                                <p className='stat'>Charisma : {cha}</p>
+                            </div>
+                            <div className='brawn'>
+                                <p className='stat'>Strength : {str}</p>
+                                <p className='stat'>Constitution : {con}</p>
+                                <p className='stat'>Dexterity : {dex}</p>
+                            </div>
                     </div>}
             <button onClick={onRoll}>Roll up!</button>
         </div>

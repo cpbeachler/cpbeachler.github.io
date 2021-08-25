@@ -1,9 +1,9 @@
-import Char from "./components/Char"
+import Backdrop from "./components/Backdrop"
 
 function App() {
   return (
     <div>
-        <Char />
+        <Backdrop />
     </div>
   );
 }
