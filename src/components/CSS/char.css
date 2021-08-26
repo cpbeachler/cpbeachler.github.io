@@ -1,15 +1,25 @@
 .charSheet{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 50vw;
+    align-items: flex-start;
+
+}
+.charSheetHolder{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 10px;
+    border-radius: 10px;
+    padding:20px;
+    background-color: rgba(255, 255, 255, 0.5);
+
 }
 
 .stats{
-    border: 1px solid black;
     border-radius: 10px;
     display: flex;
     align-content: stretch;
@@ -25,27 +35,45 @@
 }
 
 button{
-    margin: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    /* background-color: rgba(56, 240, 253, 0.5); */
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid black;
     color: black;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
+    margin-bottom: 20px;
     cursor: pointer;
     border-radius: 16px;
+    border: none;
+}
+
+button:hover{
+    transition: background-color .25s ;
+
+    background-color:rgba(25, 252, 138, 0.5);
 }
 
 .suggestion{
-    border: 1px solid black;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
     width: 25vw;
     background-color: rgba(255, 255, 255, 0.5);
-    margin: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .5)
+}
+
+@media screen and (max-width: 1151px){
+    .charSheet{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        gap: 20px 20px;
+        align-items: flex-start;
+
+    }
 }

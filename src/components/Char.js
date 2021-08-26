@@ -72,28 +72,39 @@ const Char = () =>{
 
 
     return(
-        <div className='charSheet'>
-            {console.log(suggest)}
-            {!hideChar &&
-                        <div className='stats'>
-                            <div className='brain'>
-                                <p className='stat'>Wisdom : {wis}</p>
-                                <p className='stat'>Intelligence : {int}</p>
-                                <p className='stat'>Charisma : {cha}</p>
-                            </div>
-                            <div className='brawn'>
-                                <p className='stat'>Strength : {str}</p>
-                                <p className='stat'>Constitution : {con}</p>
-                                <p className='stat'>Dexterity : {dex}</p>
-                            </div>
-                    </div>}
-            {!hideChar &&
-                        <div className='suggestion'>
-                            {suggest.map((suggestion)=> {
-                                return <p>{suggestion}</p>
-                            })}
-                        </div>}
+        <div className='charSheetHolder'>
             <button onClick={onRoll}>Roll up!</button>
+            <div className='charSheet'>
+                {hideChar &&
+                    <div className='suggestion'>
+                        <p>
+                            While creating this site I became inspired to design a stat roller for table top role-playing games.
+                            Throughout my journey becoming a software developer I experience a rekindling for my love of the genre.
+                            By rolling up, you will roll four dice, six times, each time dropping your lowest result.
+                            After the results are in, I will suggest a few classes for your new character!
+                        </p>
+                    </div>
+                }
+                {!hideChar &&
+                            <div className='stats'>
+                                <div className='brain'>
+                                    <p className='stat'>Wisdom : {wis}</p>
+                                    <p className='stat'>Intelligence : {int}</p>
+                                    <p className='stat'>Charisma : {cha}</p>
+                                </div>
+                                <div className='brawn'>
+                                    <p className='stat'>Strength : {str}</p>
+                                    <p className='stat'>Constitution : {con}</p>
+                                    <p className='stat'>Dexterity : {dex}</p>
+                                </div>
+                        </div>}
+                {!hideChar &&
+                            <div className='suggestion'>
+                                {suggest.map((suggestion)=> {
+                                    return <p>{suggestion}</p>
+                                })}
+                            </div>}
+            </div>
         </div>
     )
 }

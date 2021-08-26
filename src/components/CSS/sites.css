@@ -1,0 +1,28 @@
+.siteHolder, .siteDescription{
+    border-radius: 10px;
+    padding: 5px;
+    /* width: 40vw; */
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5)
+}
+
+.logo{
+    width: 33%;
+}
+.focused{
+    width: 33%;
+    filter: drop-shadow(0px 0px 10px rgba(25, 252, 138));
+}
+
+.siteContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 45em;
+}
+
+.siteDescription{
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
