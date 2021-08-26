@@ -5,8 +5,10 @@
     width: 75vw;
     background-color: rgba(255, 255, 255, 0.5);
     margin: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5)
 }
 
 .aboutText{
     margin: 10px;
+    text-align: center;
 }

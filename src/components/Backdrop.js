@@ -1,17 +1,21 @@
 import React from "react";
 import Char from "./Char";
 import About from "./About";
+import Skills from "./Skills"
 import './CSS/backdrop.css'
 
 const Backdrop = () => {
 
     return (
-        <div>
-            <div className='context'>
-                <Char />
-                <About />
-            </div>
+        <>
             <div className='area'>
+                <div className='context'>
+                    <About />
+                </div>
+                <div className='second'>
+                    <Skills />
+                    <Char />
+                </div>
                 <ul className='circles'>
                     <li></li>
                     <li></li>
@@ -25,7 +29,7 @@ const Backdrop = () => {
                     <li></li>
                 </ul>
             </div>
-        </div>
+        </>
     )
 }
 

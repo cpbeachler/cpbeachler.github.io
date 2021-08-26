@@ -12,13 +12,22 @@
     align-items: center;
 }
 
+.second{
+    width: 100%;
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
 .area{
-    background: #19FC8A;
-    background: -webkit-linear-gradient(to left, #19FCE5, #19FC8A);
+    background: rgb(60,59,59);
+    background: linear-gradient(0deg, rgba(60,59,59,1) 0%, rgba(144,144,144,1) 22%, rgba(203,203,203,1) 100%);
     width: 100%;
     height:100vh;
-
-
 }
 
 .circles{
@@ -28,6 +37,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .circles li{
@@ -36,10 +46,9 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(25, 252, 138, .5);
     animation: animate 25s linear infinite;
     bottom: -150px;
-
 }
 
 .circles li:nth-child(1){

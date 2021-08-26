@@ -8,7 +8,16 @@ const Char = () =>{
     const [int, setInt] = useState(0)
     const [dex, setDex] = useState(0)
     const [cha, setCha] = useState(0)
+    const [suggest, setSuggest] = useState()
     const [hideChar, setHideChar] = useState(true)
+
+    const wisDescription = 'Your highest stat is Wisdom! You would make a great Cleric or Druid. Will you follow the Light or the Wild?'
+    const strDescription = 'Your highest stat is Strength! You would make a great Fighter or Paladin. Will you fight for sport or duty?'
+    const conDescription = 'Your highest stat is Constitution! You would make a great Barbarian, but every class needs a decent health pool!'
+    const intDescription = `Your highest stat is Intelligence! Thats the perfect stat for a wizard! Don't forget to prepare fireball!`
+    const dexDescription = 'Your highest stat is Dexterity! You should play a Monk or a Rogue. Will you steal from the rich, or give to the poor?'
+    const chaDescription = 'Your highest stat is Charisma! You would be a perfect Sorcerer or Warlock. Was your power given to you, or is it from your bloodline?'
+    const descriptions = [wisDescription, strDescription, conDescription, intDescription, dexDescription, chaDescription]
 
     const onRoll = (e) => {
         e.preventDefault()
@@ -30,15 +39,41 @@ const Char = () =>{
             }
             return dropped.reduce((a,b) => a + b, 0)
         }
+
         setWis(getStat())
         setStr(getStat())
         setCon(getStat())
         setInt(getStat())
         setDex(getStat())
         setCha(getStat())
+
     }
+
+    useEffect(()=>{
+
+        const consider = () => {
+            let fullStats = [wis, str, con, int, dex, cha]
+            let max = Math.max(...fullStats)
+            let desc = []
+            if(max > 0){
+                fullStats.forEach((stat, i) => {
+                    if(stat === max){
+                        desc.push(descriptions[i])
+                    }
+                })
+            }
+            setSuggest(desc)
+        }
+        consider()
+    },[cha])
+
+
+
+
+
     return(
         <div className='charSheet'>
+            {console.log(suggest)}
             {!hideChar &&
                         <div className='stats'>
                             <div className='brain'>
@@ -52,6 +87,12 @@ const Char = () =>{
                                 <p className='stat'>Dexterity : {dex}</p>
                             </div>
                     </div>}
+            {!hideChar &&
+                        <div className='suggestion'>
+                            {suggest.map((suggestion)=> {
+                                return <p>{suggestion}</p>
+                            })}
+                        </div>}
             <button onClick={onRoll}>Roll up!</button>
         </div>
     )
