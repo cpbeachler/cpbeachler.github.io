@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.1273d38f.chunk.css",
-    "main.js": "/static/js/main.4b90b68b.chunk.js",
-    "main.js.map": "/static/js/main.4b90b68b.chunk.js.map",
+    "main.css": "/static/css/main.10b9f761.chunk.css",
+    "main.js": "/static/js/main.22bb3869.chunk.js",
+    "main.js.map": "/static/js/main.22bb3869.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.149a1e10.js",
     "runtime-main.js.map": "/static/js/runtime-main.149a1e10.js.map",
     "static/js/2.28266ad7.chunk.js": "/static/js/2.28266ad7.chunk.js",
     "static/js/2.28266ad7.chunk.js.map": "/static/js/2.28266ad7.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1273d38f.chunk.css.map": "/static/css/main.1273d38f.chunk.css.map",
+    "static/css/main.10b9f761.chunk.css.map": "/static/css/main.10b9f761.chunk.css.map",
     "static/js/2.28266ad7.chunk.js.LICENSE.txt": "/static/js/2.28266ad7.chunk.js.LICENSE.txt",
     "static/media/CraniumLandLogo.2dad381b.png": "/static/media/CraniumLandLogo.2dad381b.png",
     "static/media/PodemicLogo.4779ce06.png": "/static/media/PodemicLogo.4779ce06.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.149a1e10.js",
     "static/js/2.28266ad7.chunk.js",
-    "static/css/main.1273d38f.chunk.css",
-    "static/js/main.4b90b68b.chunk.js"
+    "static/css/main.10b9f761.chunk.css",
+    "static/js/main.22bb3869.chunk.js"
   ]
 }
