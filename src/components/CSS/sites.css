@@ -19,6 +19,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     max-width: 45em;
+    text-align: center;
 }
 
 .siteDescription{
